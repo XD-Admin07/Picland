@@ -104,7 +104,7 @@ function Searched() {
   return (
     <>
     <div className='flex flex-col items-center'>
-      <div className='m-auto w-full bg-[#6BBF59] p-5 h-[70px]'>
+      <div className='m-auto w-full bg-[#6BBF59] pt-5 h-[70px]'>
         <Navbar />
       </div>
       <div className={`w-full m-auto ${clickedImage ? 'hidden' : ''}`}>

@@ -36,8 +36,8 @@ export default function Navbar() {
           </div>}
   
           {token !== null && (<Profiledrop/>)}
-          {token === null && (<Link to='/login'><div><button className='mr-5 text-[10px] md:text-[13px] lg-[13px]'>Sign in</button></div></Link>)}
-          {token === null && (<Link to='/signup'><div><button className='border text-[10px] md:text-[13px] lg-[13px] lg:w-[88px] w-[73px] h-[29px] lg:h-[35px] md:w-[88px] md:h-[35px] rounded-[7px]'>Sign up</button></div></Link>)}
+          {token === null && (<Link to='/login'><div><button className='mr-5 text-[10px] md:text-[13px] lg-[13px] text-white'>Sign in</button></div></Link>)}
+          {token === null && (<Link to='/signup'><div><button className='border text-[10px] md:text-[13px] lg-[13px] lg:w-[88px] w-[73px] h-[29px] lg:h-[35px] md:w-[88px] md:h-[35px] rounded-[7px] text-white'>Sign up</button></div></Link>)}
           <div className='lg:hidden md:hidden w-[33px] h-[26.65px] ml-5'><img src={hamburger}/></div>
         </div>
       </div>

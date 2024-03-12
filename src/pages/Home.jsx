@@ -53,18 +53,18 @@ export default function Home() {
 
       </div>
 
-      < div className='mt-12'>
-        <h2 className='mt-5 pl-[70px] font-medium lg:text-[32px] md:-text-[32px] text-2xl text-[#3B3B3A] text-left lg:pl-[110px] md:pl-[110px] '><span className='text-[#9E7B00]'>Unlock</span> your inner creator</h2>
+      < div className='mt-12 flex flex-col'>
+        <h2 className='m-auto lg:m-0 md:m-0 lg:mt-5 md:mt-5 font-medium lg:text-[32px] md:-text-[32px] text-2xl text-[#3B3B3A] text-left lg:pl-[110px] md:pl-[110px] '><span className='text-[#9E7B00]'>Unlock</span> your inner creator</h2>
         <p className='lg:text-left md:text-left lg:pl-[35px] md:pl-[35px] w-[90%] m-auto mt-[12px]'>Get the inspiration you need with these collections carefully selected to boost your project’s engagement.</p>
-        <div className='w-[90%] m-auto mt-10 lg:h-[638px] md:h-[638px] h-[740px] bg-[#9E7B00]'>
+        <div className='w-[90%] m-auto mt-10 lg:h-[638px] md:h-[638px] h-[760px] bg-[#9E7B00] flex flex-col'>
           <div className='flex justify-between'>
-            <p className='lg:text-[24px] md:text-[24px] text-md lg:font-bold md:font-bold font-medium text-left lg:pl-[90px] md:pl-[90px] pt-[20px] text-white pl-[75px] mt-[12px]'>With our Picland <span className='text-[#FFECA6]'>STUDIO </span>plan</p>
+            <p className='lg:text-[24px] md:text-[24px] text-md lg:font-bold md:font-bold font-medium text-left lg:pl-[90px] md:pl-[90px] pt-[20px] text-white m-auto lg:m-0 md:m-0 lg:mt-[12px] md:mt-[12px] mt-[12px]'>With our Picland <span className='text-[#FFECA6]'>STUDIO </span>plan</p>
            <Link to ="/pricing"><p className='font-medium lg:text-[22px] md:text-[22px] hidden lg:block md:block pr-10 pt-5 text-white'>{user?.Plan!==false?"Subscribed":"Subscribe"}</p></Link> 
           </div>
-          <p className='lg:pl-[90px] md:pl-[90px] pl-[60px] text-left text-white font-kalam lg:text-[16px] md:text-[16px] text-sm lg:mt-[8px] md:mt-[8px]' >You will get amazing exclusive collection</p>
+          <p className='lg:pl-[90px] md:pl-[90px] m-auto mt-1 lg:m-0 md:m-0 text-left text-white font-kalam lg:text-[16px] md:text-[16px] text-sm lg:mt-[8px] md:mt-[8px]' >You will get amazing exclusive collection</p>
 
           <div className='w-[90%] h-[80%] align-middle m-auto items-center lg:flex  justify-between'>
-            <div><img src={gold} className='lg:w-[360px] md:w-[36px] w-[320px] m-auto mt-[20px]' /></div>
+            <div><img src={gold} className='lg:w-[360px] md:w-[36px] w-[320px] m-auto lg:mt-[20px] mg:mt-[20px]' /></div>
             <div className='flex-col space-y-10 mt-[15px]'>
               <div className='flex'>
                 <img src={worth} className='w-[62px]' />
@@ -88,7 +88,7 @@ export default function Home() {
                     productivity</p>
                 </div>
               </div>
-              <Link to ="/pricing"><p className='font-medium lg:text-[22px] md:text-[22px]  lg:hidden md:hidden text-right pr-3 pt-5 text-white'>{user?.Plan!==false?"Subscribed":"Subscribe"}</p></Link> 
+              <Link to ="/pricing"><p className='font-medium lg:text-[22px] md:text-[22px]  lg:hidden md:hidden text-right pr-3 pt-5 text-white'>{(user?.Plan=="yearly" || user?.Plan==="monthly")?"Subscribed":"Subscribe"}</p></Link> 
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
 
       <div className='w-full lg:h-[620px] h-[700px] lg:bg-gradient-to-r from-green-500 to-white bg-gradient-to-b from-green-500 to-white mt-[80px]'>
         <p className='lg:text-left lg:pl-20 text-[24px] lg:text-[32px] md:text-[32px] font-medium text-white pt-10'>Contributors</p>
-        <p className='lg:text-left lg:pl-20  text-white '>Behind every stock image there’s a creative mind</p>
+        <p className='lg:text-left lg:pl-20  text-white w-[90%] m-auto lg:m-0 md:m-0'>Behind every stock image there’s a creative mind</p>
          <div className='lg:flex justify-around items-center mt-[20px]'> 
             <div className='lg:w-[469px]  w-[320px]  '><img src={contri}/></div>
             <div><img src={graphic} className='lg:w-[520px] w-[320px] m-auto'/></div>
