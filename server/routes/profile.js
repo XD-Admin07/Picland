@@ -2,14 +2,17 @@ const express=require("express");
 const router=express.Router();
 
 const{
-    updateDp,updateProfile,
+    updateDp,updateProfile,getAllUserDetails
 }=require("../controllers/Profile");
 
 const {auth,isUser,isContributor}=require("../middleware/auth");
 //router for updatedp
-router.post("/updatedp",auth,updateDp);
+router.put("/updatedp",auth,updateDp);
 
 //router for updateprofile
-router.post("/updateprofile",auth,updateProfile);
+router.put("/updateprofile",auth,updateProfile);
+
+//get user details
+router.get("/getuserdetails",auth,getAllUserDetails)
 
 module.exports=router;

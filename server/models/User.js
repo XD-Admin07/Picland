@@ -16,7 +16,7 @@ const userSchema=new mongoose.Schema(
             trim:true,
         },
         Plan:{
-            type:Boolean,
+            type:String,
             default:false,
         },
         image:{
@@ -38,7 +38,7 @@ const userSchema=new mongoose.Schema(
             type: Date,
           },
          
-    },
+    },{ strict: false },
     { timestamps: true }
 )
 

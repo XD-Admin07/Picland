@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #f4f4f4;
+}
+
+/*WebKit (Chrome, Safari, Edge) */
+ *::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #333333;
+  border-radius: 3px;
+}
+
+html{
+  scroll-behavior: smooth;
+}

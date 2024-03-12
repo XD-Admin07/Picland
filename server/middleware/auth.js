@@ -1,36 +1,59 @@
-const jwt=require("jsonwebtoken");
-const User=require("../models/User");
+// Importing required modules
+const jwt = require('jsonwebtoken');
 
-exports.auth =async (req,res,next)=>{
-    try{
-        const token=req.cookies.token||
-        req.body.token ||
-        req.header("Authorization").replace("Bearer","");
+//const dotenv = require("dotenv");
+const User = require("../models/User");
+const { jwtDecode } = require('jwt-decode');
+const Contributor = require('../models/Contributor');
+// Configuring dotenv to load environment variables from .env file
+//dotenv.config();
 
-        if(!token){
-            return res.status(401).json({
-                success:false,
-                message:`Token Missing`
-            })
-        }
+// This function is used as middleware to authenticate user requests
+exports.auth = async (req, res, next) => {
+	try {
+		const token =
+			req.cookies.token ||
+			req.body.token ||
+			req.header("Authorization").replace("Bearer ", "");
 
-        try{
-            //verifying the JWT using the secret key stroed in environment variables
-            const decode=await jwt.verify(token,process.env.JWT_SECRET);
-            console.log(decode);
-            //Storing the decoded JWT payload in the request object for further use
-            req.user=decode;
-        }catch(error){
-            return res.status(401).json({success:false,message:"token is invalid"});
+		console.log("Token:", token);
 
-        }
-        // If JWT is valid, move on to the next middleware or request handler
-        next();
-    }catch (error) {
-		// If there is an error during the authentication process, return 401 Unauthorized response
+		if (!token) {
+			return res.status(401).json({ success: false, message: `Token Missing` });
+		}
+
+		try {
+			//const decode = await jwt.verify(token, process.env.JWT_SECRET);
+			const decode = await jwtDecode(token);
+			const user = await User.findById(decode.id);
+
+		if ((user?.Plan==="yearly" || user?.Plan==="monthly") && (user?.PlanDate && user?.PlanDate < new Date())) {
+			// Subscription has expired
+			await User.findByIdAndUpdate(
+				decode.id,
+				{
+					Plan: false,
+					$unset: { PlanDate: 1 } // Remove the PlanDate field
+				},
+				{ new: true }
+			);
+		}
+			console.log("Decoded Token:", decode);
+			req.user = decode;
+		} catch (error) {
+			console.error("Token Verification Error:", error);
+			return res.status(401).json({ success: false, message: "Token is invalid" });
+		}
+
+		
+
+
+		next();
+	} catch (error) {
+		console.error("Authentication Error:", error);
 		return res.status(401).json({
 			success: false,
-			message: `Something Went Wrong While Validating the Token`,
+			message: `Something went wrong while validating the token`,
 		});
 	}
 };
@@ -55,7 +78,7 @@ exports.isUser = async (req, res, next) => {
 
 exports.isContributor = async (req, res, next) => {
 	try {
-		const userDetails = await User.findOne({ email: req.user.email });
+		const userDetails = await Contributor.findOne({ email: req.user.email });
 
 		if (userDetails.accountType !== "Contributor") {
 			return res.status(401).json({
@@ -70,3 +93,5 @@ exports.isContributor = async (req, res, next) => {
 			.json({ success: false, message: `User Role Can't be Verified` });
 	}
 };
+
+

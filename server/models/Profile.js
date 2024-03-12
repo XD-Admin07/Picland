@@ -20,4 +20,4 @@ const userProfile=new mongoose.Schema(
         }
     }
 )
-module.exports=mongoose.model("profile",userProfile);
+module.exports=mongoose.model("Profile",userProfile);

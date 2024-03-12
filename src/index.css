@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .golden-light {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  border: 2px solid transparent;
+  border-radius: 9px;
+  background: linear-gradient(45deg, #ffcc00, #ffdb58, #ffcc00);
+  background-size: 400% 400%;
+  animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+@keyframes moveLight {
+  0% {
+      box-shadow: 0 0 10px 2px yellow, 0 0 20px 4px yellow, 0 0 30px 6px yellow, 0 0 40px 8px yellow;
+  }
+  100% {
+      box-shadow: 0 0 10px 2px yellow, 0 0 20px 4px yellow, 0 0 30px 6px yellow, 0 0 40px 8px transparent;
+  }
+}
+
+.animation {
+  animation: moveLight 8s infinite alternate;
+} */
+
+

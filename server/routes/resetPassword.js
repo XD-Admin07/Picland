@@ -4,7 +4,7 @@ const router=express.Router();
 const {resetPassword,resetPasswordToken}=require("../controllers/resetPassword");
 
 
-router.post("/resettoken",resetPasswordToken);
-router.post("/resetpassword",resetPassword);
+router.post("/reset-password-token",resetPasswordToken);
+router.post("/reset-password",resetPassword);
 
 module.exports=router;
