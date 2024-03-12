@@ -98,7 +98,7 @@ const img=[
 
   return (
     
-    <div className="text-white w-full lg:h-[560px] md:h-[560px] h-[500px]" 
+    <div className="text-white w-full lg:h-[560px] md:h-[560px] h-[535px]" 
     style={{
       backgroundImage: `url(${img[currentImageIndex].a})`,
       backgroundSize: 'cover',
@@ -115,7 +115,7 @@ const img=[
         Empower Your Vision with Exceptional Images
         </h1>
         <p className="lg:text-[18px] mt-[25px] text-sm">
-          Explore Plenty of Hi-res images and videos on Picland for free
+          Explore plenty of Hi-res images and videos on Picland for free
         </p>
         {/* <div className="m-auto mt-0">
           <Search borderColor="#" />
@@ -124,8 +124,8 @@ const img=[
         <div className="relative lg:w-[70%] md:w-[70%] w-[100%] my-[55px] flex items-center m-auto">
       <select className="absolute hidden lg:block md:block left-[10px] h-[39px] w-[104px] text-black rounded-lg">
         <option>Photos</option>
-        <option>Video</option>
-        <option>Vector</option>
+        {/* <option>Video</option>
+        <option>Vector</option> */}
       </select>
       <input
         type="search"

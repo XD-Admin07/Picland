@@ -26,7 +26,7 @@ export function Addimage(
             
         )
 
-        console.log("ADD IMAGE RESPONSE...........",response);
+        //console.log("ADD IMAGE RESPONSE...........",response);
         // if(!response.data.successs){
         //     throw new Error(response.data.message)
         // }

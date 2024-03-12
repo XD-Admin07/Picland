@@ -12,7 +12,7 @@ export function getUserDetails(userId, navigate) {
       
       try {
         const response = await apiConnector("GET", FETCH_CON, userId,)
-        console.log("GET_CON_DETAILS API RESPONSE............", response)
+        //console.log("GET_CON_DETAILS API RESPONSE............", response)
   
         if (!response.data.success) {
           throw new Error(response.data.message)

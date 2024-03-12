@@ -10,7 +10,7 @@ export function fetchimage() {
       const toastId = toast.loading("Loading...");
       try {
         const response = await apiConnector("GET", FETCH_IMG);
-        console.log("FETCH IMAGE RESPONSE...........", response);
+        //console.log("FETCH IMAGE RESPONSE...........", response);
         // if(!response.data.successs){
         //     throw new Error(response.data.message)
         // }

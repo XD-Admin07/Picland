@@ -54,7 +54,7 @@ export async function BuySubscription(
             throw new Error(orderResponse.data.message)
           }
          
-          console.log("PAYMENT RESPONSE FROM BACKEND............", orderResponse.data)
+          //console.log("PAYMENT RESPONSE FROM BACKEND............", orderResponse.data)
           
           // Opening the Razorpay SDK
           const options ={
