@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
          <Main />
-      <h2 className='mt-5 font-medium w-[70%] lg:text-[32px] md:text-[32px] text-2xl m-auto text-[32px] text-[#3B3B3A]'><span className='text-[#6BBF59]'>Explore </span>trending categories on Picland</h2>
+      <h2 className='mt-5 font-medium w-[70%] lg:text-[32px] md:text-[32px] text-2xl m-auto  text-[#3B3B3A]'><span className='text-[#6BBF59] lg:text-[32px] md:text-[32px] text-2xl'>Explore </span>trending categories on Picland</h2>
       <p className='lg:text-[16px] md:text-[16px] text-sm mt-[15px] w-[90%] m-auto'>Check what’s popular on Picland and make your project look trendy and professional.</p>
 
       <div className='mt-7 lg:w-[80%] w-[95%] m-auto'>
