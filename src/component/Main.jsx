@@ -112,7 +112,7 @@ const img=[
       </div>
       <div className="flex flex-col mt-[150px] w-[80%] lg:w-[100%] m-auto">
         <h1 className="lg:text-[39px] font-inter font-bold text-3xl">
-          Great Product Need Great Picture, Isn’t?
+        Empower Your Vision with Exceptional Images
         </h1>
         <p className="lg:text-[18px] mt-[25px] text-sm">
           Explore Plenty of Hi-res images and videos on Picland for free
