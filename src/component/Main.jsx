@@ -107,9 +107,14 @@ const img=[
       backgroundColor: '#6BBF59', // Fallback background color
     }}>
       {/* <img src={image['2.jpg']}/> */}
-      <div className="mt-5">
+      <div className="mt-5 ">
         <Navbar />
       </div>
+      
+    
+      
+
+
       <div className="flex flex-col mt-[150px] w-[80%] lg:w-[100%] m-auto">
         <h1 className="lg:text-[39px] font-inter font-bold text-3xl">
         Empower Your Vision with Exceptional Images
@@ -129,8 +134,8 @@ const img=[
       </select>
       <input
         type="search"
-        placeholder="Search by name"
-        className={` flex-1 lg:h-[54px] mg:h-[54px] h-[24px]  outline-[#cacaca] rounded-lg p-5 text-black lg:pl-[160px] lg:pr-[204px] border-2`}
+        placeholder="Search all images"
+        className={`text-sm flex-1 lg:h-[54px] mg:h-[54px] h-[24px]  outline-[#cacaca] rounded-lg p-5 text-black lg:pl-[160px] lg:pr-[204px] border-2`}
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
