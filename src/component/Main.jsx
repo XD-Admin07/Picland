@@ -135,7 +135,7 @@ const img=[
       <input
         type="search"
         placeholder="Search all images"
-        className={`text-sm flex-1 lg:h-[54px] mg:h-[54px] h-[24px]  outline-[#cacaca] rounded-lg p-5 text-black lg:pl-[160px] lg:pr-[204px] border-2`}
+        className={`text-sm lg:text-md md:text-md flex-1 lg:h-[54px] mg:h-[54px] h-[24px]  outline-[#cacaca] rounded-lg p-5 text-black lg:pl-[160px] lg:pr-[204px] border-2`}
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

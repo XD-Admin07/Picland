@@ -27,7 +27,7 @@ exports.signup = async (req, res) => {
         if (existCuser) {
             return res.status(400).json({
                 success: false,
-                message: "Contributor account already exist with this email. You can't create normal account with this email",
+                message: "Contributor account already exist with this email. You can't create user account with this email",
             })
         }
 

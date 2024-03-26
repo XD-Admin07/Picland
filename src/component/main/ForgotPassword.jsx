@@ -25,7 +25,7 @@ export default function ForgetPassword() {
  
   return (
     <div className='w-full flex'>
-      <div className='w-[40%] h-full flex flex-col justify-center items-center'>
+      <div className='lg:w-[45%] m-auto md:w-[40%] w-[90%] lg:m-0 md:m-0 h-full flex flex-col justify-center items-center'>
         <h1 className='font-medium text-[35px] mt-[110px] mb-10'>{!emailSent?("Forgot Password"):("Check your email")}</h1>
         <Link to="/"><div className='w-[210px] flex justify-center items-center'>
           <img src={Glogo} alt="Google Logo" />
@@ -65,7 +65,7 @@ export default function ForgetPassword() {
 
      {!emailSent && <Link to='/signup'><div className='mt-5 underline'>Don't have an account?</div></Link> }
       </div>
-      <div className="w-full h-screen bg-cover bg-center flex items-center justify-center overflow-hidden">
+      <div className="hidden  lg:block md:block w-full h-screen bg-cover bg-center  items-center justify-center overflow-hidden">
         <img src={loginv} alt="Cover" className="w-full h-auto object-cover" />
       </div>
 

@@ -8,7 +8,7 @@ import Clogin from './component/main/Clogin';
 import Csignup from './component/main/Csignup';
 import OpenRoute from './component/core/openRoute';
 import Searched from './component/core/searched';
-import Profile from './pages/myprofile';
+import Profile from './pages/Myprofile';
 import Upload from './pages/Upload';
 import { useDispatch, useSelector } from "react-redux"
 import { getUserDetails } from './services/operation/profileAPI';

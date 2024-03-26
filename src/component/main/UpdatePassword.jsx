@@ -34,7 +34,7 @@ export default function UpdatePassword() {
   }
   return (
     <div className='w-full flex'>
-      <div className='w-[40%] h-full flex flex-col justify-center items-center'>
+      <div className='lg:w-[45%] md:w-[45%] w-[90%] m-auto lg:m-0 md:m-0 h-full flex flex-col justify-center items-center'>
         <h1 className='font-medium text-[35px] mt-[110px] mb-10'>Choose a new Password</h1>
         <Link to="/"><div className='w-[210px] flex justify-center items-center'>
           <img src={Glogo} alt="Google Logo" />
@@ -72,7 +72,7 @@ export default function UpdatePassword() {
 
 
       </div>
-      <div className="w-full h-screen bg-cover bg-center flex items-center justify-center overflow-hidden">
+      <div className="hidden lg:block md:block w-full h-screen bg-cover bg-center  items-center justify-center overflow-hidden">
         <img src={loginv} alt="Cover" className="w-full h-auto object-cover" />
       </div>
 
