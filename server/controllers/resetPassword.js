@@ -27,7 +27,7 @@ exports.resetPasswordToken = async (req, res) => {
             }
         )
         console.log("DETAILS", updateDetails);
-         const url = `http://localhost:3000/update-password/${token}`
+         const url = `http://picland.vercel.app/update-password/${token}`
         //const url = `https://just-learn-frontend.vercel.app/update-password/${token}`
 
         await mailSender(

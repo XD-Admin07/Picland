@@ -64,13 +64,27 @@ export default function Upload() {
     <div>
         <Profile/>
         <div>
-        <form onSubmit={handleOnSubmit} encType="multipart/form-data" className="max-w-lg mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-  <div className="mb-4">
-    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-      Name
+          <div className='w-[60%] m-auto'>
+            <div className='flex mt-10'>
+        <form onSubmit={handleOnSubmit} encType="multipart/form-data" className=" max-w-lg mx-auto bg-[#3B3B3A] w-[556px] h-[715px] shadow-md rounded-[9px] px-8 pt-6 pb-8 mb-4">
+        <div className="mb-4">
+    <label className="block text-[#8F8787] text-sm font-medium mb-2" htmlFor="image" name='file'>
+      {/* Image */}
+    </label>
+    <input  onChange={handleOnFileChange}
+      className="appearance-none  rounded m-auto mw-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="image"
+      type="file"
+    />
+  </div>
+  
+  <div className="mb-4 flex flex-col">
+    <div className='flex flex-col m-auto'>
+    <label className=" text-[#8F8787] text-sm text-left font-medium mb-2" htmlFor="name">
+      Name<span className='text-[#b43434]'>*</span>
     </label>
     <input  onChange={handleOnChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none h-[39px] rounded-[9px] w-[380px] bg-[#1E1E1E] py-2 px-3 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
       id="name"
       name="name"
       value={name}
@@ -78,50 +92,128 @@ export default function Upload() {
       placeholder="Name"
     />
   </div>
-  <div className="mb-4">
-    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="image" name='file'>
-      Image
+  </div>
+  <div className="mb-4 flex flex-col">
+    <div className='flex flex-col m-auto'>
+    <label className=" text-[#8F8787] text-sm text-left font-medium mb-2" htmlFor="name">
+      Description<span className='text-[#b43434]'>*</span>
     </label>
-    <input  onChange={handleOnFileChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-      id="image"
-      type="file"
+    <textarea onChange={handleOnChange}
+      className="shadow appearance-none  rounded-[9px] w-[380px] bg-[#1E1E1E] py-2 px-3 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
+      id="description"
+      name="description"
+      rows="4" cols="50"
+      //value={description}
+      type="text"
+      placeholder="description"
     />
   </div>
-  <div className="mb-4">
-    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subscription">
-      Studio
-    </label>
-    <input  onChange={handleOnChange}
-      className="mr-2 leading-tight"
-      id="studio"
-      name="studio"
-      value={studio}
-      type="checkbox"
-    />
   </div>
-  <div className="mb-4">
-    <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="category">
-      Category
+  
+  
+  <div className="mb-4 flex flex-col">
+    <div className='flex flex-col m-auto'>
+    <label className=" text-[#8F8787] text-sm text-left  font-medium mb-2" htmlFor="category">
+      Category<span className='text-[#b43434]'>*</span>
     </label>
     <input  onChange={handleOnChange}
-      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      className="shadow appearance-none  h-[39px] rounded-[9px] w-[380px] bg-[#1E1E1E]  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       id="category"
       name="category"
       type="text"
       value={category}
       placeholder="Category"
     />
+    </div>
   </div>
-  <div className="flex items-center justify-between">
+  <div className="mb-4 mt-5">
+    <div className='flex space-x-5 w-[380px] m-auto'>
+    <p className='text-[#8F8787] '>Content type<span className='text-[#b43434]'>*</span></p>
+    <div className='flex space-x-3'>
+    <div>
+   
+    <input  onChange={handleOnChange}
+      className=" leading-tight"
+      id="studio"
+      name="studio"
+      value={studio}
+      type="radio"
+    />
+     <label className=" text-[#8F8787] text-sm font-medium mb-2" htmlFor="subscription">
+      Studio
+    </label>
+    </div>
+    <div>
+   
+    <input  onChange={handleOnChange}
+      className=" leading-tight"
+      id="studio"
+      name="studio"
+      value={studio}
+      type="radio"
+    />
+     <label className=" text-[#8F8787] text-sm font-medium mb-2" htmlFor="subscription">
+      Free
+    </label>
+    </div>
+    </div>
+  </div>
+  <div className='mb-4 mt-4'>
+    
+   <div className='flex space-x-5 w-[380px] m-auto'>
+   <p className='text-[#8F8787]'>File type</p>
+   <div className='flex space-x-3'>
+    <div>
+    <input className=''
+           id='file-type'
+           type='radio' 
+           name="JPG"    
+    />
+     <label className='text-[#8F8787]'>
+      PNG
+    </label>
+    </div>
+     <div>
+    <input className=''
+           id='file-type'
+           type='radio'  
+           name="JPG"   
+    />
+    <label className='text-[#8F8787]'>
+      JPG
+    </label>
+    </div>
+    <div>
+    <input className=''
+           id='file-type'
+           name="JPG"
+          
+           type='radio'     
+    />
+    <label className='text-[#8F8787] text-medium'>
+      JPEG
+    </label>
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  <div className="mt-8">
     <button
-      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      className="bg-[#6BBF59]  w-[92px] h-[31px] text-white font  px-4 rounded-[7px] focus:outline-none focus:shadow-outline"
       type="submit"
     >
-      Submit
+      Upload
     </button>
   </div>
 </form>
+<div className='bg-[#3B3B3A] rounded-[9px] w-[329px] h-[715px]'>
+
+</div>
+</div>
+
+</div>
+
 
         </div>
     </div>
